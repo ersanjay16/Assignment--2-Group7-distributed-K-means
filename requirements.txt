@@ -1,0 +1,26 @@
+# Distributed K-Means Production Requirements
+# Version 2.0 - Production-Hardened
+
+# Core Dependencies
+pyspark>=3.0.0          # Distributed computing framework
+numpy>=1.19.0           # Vectorized operations and numerical computing
+scikit-learn>=0.24.0    # For validation and test data generation only
+
+# Optional Dependencies (for reporting/visualization)
+reportlab>=3.5.0        # PDF report generation (optional)
+matplotlib>=3.3.0       # Visualization and speedup graphs (optional)
+
+# Production Recommendations:
+# - Use Python 3.8+ (tested up to 3.11)
+# - PySpark 3.4+ recommended for latest optimizations
+# - NumPy version must support vectorized operations
+# - scikit-learn only needed for testing/validation, not production runtime
+
+# Installation:
+# pip install -r requirements.txt
+
+# Minimal Production Install (without optional deps):
+# pip install pyspark numpy
+
+# Note: The implementation has ZERO runtime dependency on scikit-learn
+# scikit-learn is only imported in test functions for validation
